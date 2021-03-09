@@ -1,18 +1,18 @@
 import React from 'react'
 
-export default function Currency() {
+export default function Currency({currencyName, currencyRate, based}) {
   return (
     <div className="m-4 border border-gray-300 text-gray-700 flex flex-row justify-between items-stretch">
       <div className="flex-1 m-2">
         <div className="flex flex-row justify-between">
-          <p>IDR</p>
-          <p>123.000.000</p>
+          <p>{currencyName}</p>
+          <p>{currencyRate * based }</p>
         </div>
         <div>
-          <i className="text-xs font-bold">IDR - Indonesian Rupiah</i>
+          <i className="text-xs font-bold">{currencyName} - Indonesian Rupiah</i>
         </div>
         <div>
-          <i className="text-xs">1 USD = IDR 14.000.000</i>
+          <i className="text-xs">1 {currencyName} = IDR {currencyRate}</i>
         </div>
       </div>
       <div className="w-px bg-gray-300"></div>
